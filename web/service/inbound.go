@@ -2023,19 +2023,19 @@ func (s *InboundService) GetOnlineClients() []string {
 	return p.GetOnlineClients()
 }
 
-func validateEmail(email string) (bool, error) {
-	if strings.Contains(email, " ") {
-		return false, errors.New("email contains spaces, please remove them")
-	}
-
-	if email != strings.ToLower(email) {
-		return false, errors.New("email contains uppercase letters, please convert to lowercase")
-	}
-
-	emailPattern := `^[a-z0-9@._-]+$`
-	if !regexp.MustCompile(emailPattern).MatchString(email) {
-		return false, errors.New("email contains invalid characters, please use only lowercase letters, digits, and @._-")
-	}
-
-	return true, nil
-}
+//func validateEmail(email string) (bool, error) {
+//	if strings.Contains(email, " ") {
+//		return false, errors.New("email contains spaces, please remove them")
+//	}
+//
+//	if email != strings.ToLower(email) {
+//		return false, errors.New("email contains uppercase letters, please convert to lowercase")
+//	}
+//
+//	emailPattern := `^[a-z0-9@._-]+$`
+//	if !regexp.MustCompile(emailPattern).MatchString(email) {
+//		return false, errors.New("email contains invalid characters, please use only lowercase letters, digits, and @._-")
+//	}
+//
+//	return true, nil
+//}
